@@ -1,16 +1,17 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from random import randint
 
+n = int(input('Enter number of coins :'))
+tails = 0
+emblems = 0
+for _ in range(n):
+    curr = randint(0, 1)
+    print(f'{curr} ', end='')
+    if curr == 0 :
+        tails +=1
+    else:
+        emblems += 1
+print()
+print(f'Number of coins to turn: {tails if tails < emblems else emblems}')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
